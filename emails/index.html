@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>n8n the no-code auotmation | HTML Email Content Render</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { display: none; } /* Initially hide the body content */
+  </style>
+</head>
+<body>
+  <script>
+    !function() {
+      function loadContent() {
+        const params = new URLSearchParams(window.location.search);
+        const iloven8n = params.get('iloven8n');
+        const gistId = params.get('id');
+
+        if (!iloven8n || !gistId) {
+          redirectToErrorPage(); // Redirect if 'iloven8n' or 'gistId' is missing
+          return;
+        }
+
+        fetchGistContent(gistId);
+      }
+
+      function fetchGistContent(gistId) {
+        fetch(`https://api.github.com/gists/${gistId}`)
+          .then(response => response.json())
+          .then(gist => {
+            const fileName = Object.keys(gist.files)[0]; // Assuming we want the first file in the gist
+            if (!gist.files[fileName]) {
+              throw new Error(`File "${fileName}" does not exist.`);
+            }
+            document.body.innerHTML = gist.files[fileName].content; // Display the content
+            document.body.style.display = 'block'; // Show the content only after loading
+          })
+          .catch(error => {
+            console.error("Error loading content:", error);
+            redirectToErrorPage(); // Redirect if there's an error fetching the gist content
+          });
+      }
+
+      function redirectToErrorPage() {
+        window.location.href = 'https://lbyte.id';
+      }
+
+      document.addEventListener('DOMContentLoaded', loadContent);
+    }();
+  </script>
+</body>
+</html>
