@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sincere Apology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Panel 1: Introduction -->
+        <div class="panel" id="panel1">
+            <div class="panel-content">
+                <header class="animate__animated animate__fadeIn">
+                    <h1>I'm Sorry</h1>
+                    <p class="subtitle">From the bottom of my heart</p>
+                </header>
+
+                <section class="message-section">
+                    <div class="message" id="message1">
+                        <p>I know I hurt you, and I regret it every day.</p>
+                    </div>
+                    <div class="message hidden" id="message2">
+                        <p>I've spent so much time thinking about what went wrong and how I could've been better.</p>
+                    </div>
+                    <div class="message hidden" id="message3">
+                        <p>You deserve someone who treats you with respect, honesty, and love.</p>
+                    </div>
+                </section>
+
+                <div class="heart-container">
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 2: Why I Cherish You -->
+        <div class="panel" id="panel2">
+            <div class="panel-content">
+                <div class="interactive-section">
+                    <h2>The reasons I cherish you</h2>
+                    <div class="reasons-container">
+                        <div class="reason">Your smile brightens my darkest days</div>
+                        <div class="reason">Your kindness inspires me to be better</div>
+                        <div class="reason">Your strength amazes me every day</div>
+                        <div class="reason">Your laugh is my favorite sound</div>
+                        <div class="reason">Your presence makes everything better</div>
+                    </div>
+                </div>
+
+                <div class="message" id="message4">
+                    <p>I want to be that person who makes you smile every day. I want to grow and be better for you.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 3: Our Memories -->
+        <div class="panel" id="panel3">
+            <div class="panel-content">
+                <div class="memories-section">
+                    <h2>Our Best Memories</h2>
+                    <div class="memory-container">
+                        <div class="memory">Our first date</div>
+                        <div class="memory">That road trip we took</div>
+                        <div class="memory">Cooking dinner together</div>
+                        <div class="memory">Watching sunsets</div>
+                        <div class="memory">Museum date</div>
+                    </div>
+                </div>
+
+                <div class="message" id="message5">
+                    <p>I promise to listen more, understand your feelings, and be the partner you deserve.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 4: My Promises -->
+        <div class="panel" id="panel4">
+            <div class="panel-content">
+                <div class="promises-section">
+                    <h2>My Promises To You</h2>
+                    <div class="promise" id="promise1">I promise to be honest and transparent</div>
+                    <div class="promise" id="promise2">I promise to respect your boundaries</div>
+                    <div class="promise" id="promise3">I promise to be your biggest supporter</div>
+                    <div class="promise" id="promise4">I promise to work on my flaws</div>
+                    <div class="promise" id="promise5">I promise to love you better</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel 5: Hearts and Final Message -->
+        <div class="panel" id="panel5">
+            <div class="panel-content">
+                <div class="interactive-hearts">
+                    <button id="generate-hearts">Click for more hearts</button>
+                </div>
+
+                <div class="final-message animate__animated animate__fadeIn">
+                    <h2>Will you give us another chance?</h2>
+                    <div class="buttons">
+                        <button id="yes-btn" class="btn">Yes</button>
+                        <button id="no-btn" class="btn move-btn">No</button>
+                    </div>
+                    <div id="thank-you" class="hidden">
+                        <p>Thank you for giving us another chance. I won't let you down.</p>
+                        <div class="celebration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel Navigation -->
+        <div class="panel-nav">
+            <div class="panel-dot active" data-panel="1"></div>
+            <div class="panel-dot" data-panel="2"></div>
+            <div class="panel-dot" data-panel="3"></div>
+            <div class="panel-dot" data-panel="4"></div>
+            <div class="panel-dot" data-panel="5"></div>
+        </div>
+
+        <!-- Panel Controls -->
+        <div class="panel-control">
+            <button class="panel-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="panel-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
